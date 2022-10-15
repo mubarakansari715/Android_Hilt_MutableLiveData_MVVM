@@ -6,6 +6,6 @@ sealed class ResponseStateHandler<out T> {
 
     class OnFailed(val code: Int, val message: String, val messageCode: String) :
         ResponseStateHandler<Nothing>()
-
-    class OnSuccessResponse<T>(val response: T) : ResponseStateHandler<T>()
+    // according to response T is change either List<T> or only T
+    class OnSuccessResponse<T>(val response: List<T>) : ResponseStateHandler<T>()
 }
