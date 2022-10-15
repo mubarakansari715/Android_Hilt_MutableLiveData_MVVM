@@ -1,4 +1,6 @@
-package com.mubarak.android_degger_hilt.utils
+package com.mubarak.android_hilt_mutablelivedata_mvvm.utils
+
+import com.mubarak.android_hilt_mutablelivedata_mvvm.BuildConfig
 
 
 /**
@@ -6,7 +8,7 @@ package com.mubarak.android_degger_hilt.utils
  */
 object PrefKey {
 
-//    const val PREFERENCE_NAME = BuildConfig.APPLICATION_ID
+    const val PREFERENCE_NAME = BuildConfig.APPLICATION_ID
 
     const val ISLOGGEDIN = "isUserLoggedIn"
 

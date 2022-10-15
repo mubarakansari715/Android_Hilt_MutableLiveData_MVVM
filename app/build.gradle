@@ -86,6 +86,13 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-common-java8:2.5.0"
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
 
+    //crypto for encrypted shared preference
+    implementation 'androidx.security:security-crypto:1.1.0-alpha03'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+
+    //shimmer layout
+    implementation 'com.facebook.shimmer:shimmer:0.1.0@aar'
+
     //navigation components
     def nav_version = '2.5.0'
     implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")

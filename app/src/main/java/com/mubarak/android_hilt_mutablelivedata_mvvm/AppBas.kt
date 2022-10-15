@@ -7,8 +7,9 @@ import javax.inject.Inject
 
 @HiltAndroidApp
 class AppBas:Application() {
+
     @Inject
-    lateinit var mPref: MyPreference
+    lateinit var mPreference: MyPreference
 
     companion object {
         private var instance: AppBas? = null

@@ -7,6 +7,7 @@ import com.mubarak.android_hilt_mutablelivedata_mvvm.utils.Constants
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.components.ViewModelComponent
 import dagger.hilt.components.SingletonComponent
 import okhttp3.*
 import okhttp3.logging.HttpLoggingInterceptor
@@ -18,7 +19,7 @@ import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
 @Module
-@InstallIn(SingletonComponent::class)
+@InstallIn(ViewModelComponent::class)
 class NetworkModule {
 
     companion object {
@@ -35,7 +36,6 @@ class NetworkModule {
     /***
      * Retrofit calling api
      */
-    @Singleton
     @Provides
     fun providesApiObj(): ApiInterface {
         return Retrofit.Builder()
