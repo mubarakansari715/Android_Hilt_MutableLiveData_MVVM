@@ -7,8 +7,9 @@ import com.mubarak.android_hilt_mutablelivedata_mvvm.databinding.CustomViewBindi
 import com.mubarak.android_hilt_mutablelivedata_mvvm.home.model.HomeDataClass
 
 class HomeAdapter(
-    private val homeDataList: List<HomeDataClass>
-    ) : RecyclerView.Adapter<HomeAdapter.HomeAdapterViewHolder>() {
+    private val homeDataList: List<HomeDataClass>,
+    private val clickItem: (HomeDataClass) -> (Unit)
+) : RecyclerView.Adapter<HomeAdapter.HomeAdapterViewHolder>() {
 
     class HomeAdapterViewHolder(private val binding: CustomViewBinding) :
         RecyclerView.ViewHolder(binding.root) {
@@ -27,7 +28,7 @@ class HomeAdapter(
         holder.bindingData(homeDataList[position])
 
         holder.itemView.setOnClickListener {
-
+            clickItem.invoke(homeDataList[position])
         }
     }
 
