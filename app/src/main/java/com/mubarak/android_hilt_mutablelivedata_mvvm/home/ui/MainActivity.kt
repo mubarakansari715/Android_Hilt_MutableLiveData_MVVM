@@ -7,12 +7,14 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.mubarak.android_hilt_mutablelivedata_mvvm.databinding.ActivityMainBinding
+import com.mubarak.android_hilt_mutablelivedata_mvvm.home.adapter.HomeAdapter
 import com.mubarak.android_hilt_mutablelivedata_mvvm.home.model.HomeDataClass
 import com.mubarak.android_hilt_mutablelivedata_mvvm.home.viewmodel.HomeViewModel
 import com.mubarak.android_hilt_mutablelivedata_mvvm.utils.DebugLog
 import com.mubarak.android_hilt_mutablelivedata_mvvm.utils.MyPreference
 import com.mubarak.android_hilt_mutablelivedata_mvvm.utils.ResponseStateHandler
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
 
 @AndroidEntryPoint
@@ -40,10 +42,10 @@ class MainActivity : AppCompatActivity() {
                     Log.d(TAG, "Loading")
                 }
                 is ResponseStateHandler.OnSuccessResponse<HomeDataClass> -> {
-                    //Log.d(TAG, "OnSuccessResponse : ${it.response} ")
-                    getBindingData.txtId.text = it.response.toString()
 
                     DebugLog.e("OnSuccessResponse : ${it.response}")
+
+                    recyclerviewList.adapter = HomeAdapter(it.response)
 
                 }
                 is ResponseStateHandler.OnFailed -> {

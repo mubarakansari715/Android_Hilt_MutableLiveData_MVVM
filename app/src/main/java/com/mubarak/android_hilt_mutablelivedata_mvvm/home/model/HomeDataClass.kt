@@ -1,14 +1,14 @@
 package com.mubarak.android_hilt_mutablelivedata_mvvm.home.model
 
-import androidx.room.Entity
-import androidx.room.PrimaryKey
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties
+import com.fasterxml.jackson.annotation.JsonInclude
 
-
-@Entity(tableName = "HomeDataClass")
+@JsonIgnoreProperties(ignoreUnknown = true)
+@JsonInclude(JsonInclude.Include.NON_NULL)
 data class HomeDataClass(
-    @PrimaryKey val id: Int,
+    val id: Int,
     val title: String,
     val url: String,
-    val thumbnailUrl : String
+    val thumbnailUrl: String
 
 )
