@@ -1,13 +1,11 @@
-package com.mubarakansari.latziodemo.utils
+package com.mubarak.android_hilt_mutablelivedata_mvvm.utils
 
 import android.text.TextUtils
 import android.util.Patterns
-import com.mubarak.android_degger_hilt.utils.DebugLog
 import java.util.regex.Pattern
 
 /**
  * Package Name : com.appname.structure.utils
- * Project Name : BrainvireStructure
  */
 
 object Validation {

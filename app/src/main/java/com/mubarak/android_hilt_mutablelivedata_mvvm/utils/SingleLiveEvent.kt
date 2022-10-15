@@ -1,4 +1,4 @@
-package com.mubarakansari.latziodemo.utils
+package com.mubarak.android_hilt_mutablelivedata_mvvm.utils
 
 import androidx.annotation.MainThread
 import androidx.lifecycle.LifecycleOwner
@@ -27,11 +27,11 @@ class SingleLiveEvent<T> : MutableLiveData<T>() {
 
     @MainThread
     fun observe(owner: LifecycleOwner, observer: (T?) -> Unit) {
-        super.observe(owner, { t ->
+        super.observe(owner) { t ->
             if (mPending.compareAndSet(true, false)) {
                 observer(t)
             }
-        })
+        }
     }
 
     @MainThread

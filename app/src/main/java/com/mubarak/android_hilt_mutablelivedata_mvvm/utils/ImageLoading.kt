@@ -1,9 +1,9 @@
-package com.mubarak.android_degger_hilt.utils
+package com.mubarak.android_hilt_mutablelivedata_mvvm.utils
 
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
 import com.bumptech.glide.Glide
-import com.mubarak.android_degger_hilt.R
+import com.mubarak.android_hilt_mutablelivedata_mvvm.R
 import com.squareup.picasso.Picasso
 
 object ImageLoading {

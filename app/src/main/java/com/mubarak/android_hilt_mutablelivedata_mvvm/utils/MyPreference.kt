@@ -1,4 +1,4 @@
-package com.mubarak.android_degger_hilt.utils
+package com.mubarak.android_hilt_mutablelivedata_mvvm.utils
 
 import android.content.SharedPreferences
 import android.util.Base64
